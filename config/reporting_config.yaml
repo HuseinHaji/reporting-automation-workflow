@@ -1,0 +1,17 @@
+raw_folder: data/raw
+processed_folder: data/processed
+reporting_folder: data/reporting
+validation:
+  required_columns:
+    - transaction_id
+    - customer_id
+    - business_unit
+    - region
+    - transaction_date
+    - amount
+    - status_code
+    - segment
+    - product_group
+  date_column: transaction_date
+  min_date: '2023-01-01'
+  max_date: '2024-12-31'
