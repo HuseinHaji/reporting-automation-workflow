@@ -1,0 +1,11 @@
+month,business_unit,actual_eur,plan_eur,owner
+2026-01,Risk Analytics,48200,45000,Huseyn
+2026-01,Underwriting,39100,41000,Aylin
+2026-01,Operations,28400,30000,Samir
+2026-02,Risk Analytics,50600,47000,Huseyn
+2026-02,Underwriting,0,42000,Aylin
+2026-02,Operations,31900,31000,Samir
+2026-03,Risk Analytics,53100,50000,Huseyn
+2026-03,Underwriting,44700,43000,
+2026-03,Operations,33600,32000,Samir
+
