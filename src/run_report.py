@@ -5,6 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / "data" / "monthly_input.csv"
 OUTPUT_DIR = ROOT / "output"
 REQUIRED_FIELDS = ["month", "business_unit", "actual_eur", "plan_eur", "owner"]
+RUN_ID = "monthly-close-2026-q1"
 
 
 def parse_amount(row, field):
@@ -88,6 +89,45 @@ def build_control_summary(report_rows, issues):
     ]
 
 
+def build_exception_summary(issues):
+    grouped = {}
+    for issue in issues:
+        key = (issue["business_unit"], issue["severity"])
+        bucket = grouped.setdefault(
+            key,
+            {"business_unit": issue["business_unit"], "severity": issue["severity"], "issue_count": 0},
+        )
+        bucket["issue_count"] += 1
+    return sorted(grouped.values(), key=lambda item: (item["business_unit"], item["severity"]))
+
+
+def build_audit_log(rows, report_rows, issues):
+    return [
+        {"run_id": RUN_ID, "step": "extract", "status": "pass", "records": len(rows), "detail": "Input CSV loaded"},
+        {
+            "run_id": RUN_ID,
+            "step": "validate",
+            "status": "pass" if not issues else "review",
+            "records": len(issues),
+            "detail": "Quality checks completed",
+        },
+        {
+            "run_id": RUN_ID,
+            "step": "transform",
+            "status": "pass",
+            "records": len(report_rows),
+            "detail": "Variance and action fields calculated",
+        },
+        {
+            "run_id": RUN_ID,
+            "step": "publish",
+            "status": "blocked" if issues else "pass",
+            "records": len(report_rows),
+            "detail": "Reporting pack generated",
+        },
+    ]
+
+
 def write_csv(path, rows, fieldnames=None):
     if fieldnames is None:
         fieldnames = rows[0].keys() if rows else []
@@ -116,6 +156,8 @@ def main():
     write_csv(OUTPUT_DIR / "quality_issues.csv", issues, ["month", "business_unit", "severity", "issue"])
     write_csv(OUTPUT_DIR / "business_unit_scorecard.csv", build_unit_scorecard(report_rows))
     write_csv(OUTPUT_DIR / "control_summary.csv", build_control_summary(report_rows, issues))
+    write_csv(OUTPUT_DIR / "exception_summary.csv", build_exception_summary(issues))
+    write_csv(OUTPUT_DIR / "audit_log.csv", build_audit_log(rows, report_rows, issues))
 
     print(f"Wrote report and {len(issues)} quality issues to {OUTPUT_DIR}")
 

@@ -15,6 +15,8 @@ flowchart LR
     C --> D[Monthly Report]
     B --> E[Quality Issue Register]
     C --> F[Business Unit Scorecard]
+    B --> I[Audit Log]
+    E --> J[Exception Summary]
     D --> G[Management Pack]
     E --> H[Owner Follow-up]
 ```
@@ -28,6 +30,8 @@ flowchart LR
 ├── output/
 │   ├── business_unit_scorecard.csv
 │   ├── control_summary.csv
+│   ├── audit_log.csv
+│   ├── exception_summary.csv
 │   ├── monthly_report.csv
 │   └── quality_issues.csv
 └── src/
@@ -41,6 +45,8 @@ flowchart LR
 - Adds status and action fields so review items can be routed.
 - Builds a business-unit scorecard for management review.
 - Creates a control summary showing row count, variance, issue count, and report readiness.
+- Writes an audit log for extract, validate, transform, and publish steps.
+- Summarizes exceptions by business unit and severity.
 
 ## Outputs
 
@@ -50,6 +56,8 @@ flowchart LR
 | `output/quality_issues.csv` | Issue register with severity and business-unit context. |
 | `output/business_unit_scorecard.csv` | Aggregated plan-versus-actual performance by unit. |
 | `output/control_summary.csv` | One-row control dashboard for report readiness. |
+| `output/exception_summary.csv` | Exception counts by business unit and severity. |
+| `output/audit_log.csv` | Run-level audit trail for control evidence. |
 
 ## Run Locally
 
@@ -61,4 +69,4 @@ No third-party packages are required; the project uses the Python standard libra
 
 ## Skills Demonstrated
 
-Reporting automation, data-quality controls, variance analysis, workflow design, exception handling, and management-ready output design.
+Reporting automation, data-quality controls, auditability, variance analysis, workflow design, exception handling, and management-ready output design.

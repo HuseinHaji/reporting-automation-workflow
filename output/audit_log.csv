@@ -1,0 +1,5 @@
+run_id,step,status,records,detail
+monthly-close-2026-q1,extract,pass,9,Input CSV loaded
+monthly-close-2026-q1,validate,review,2,Quality checks completed
+monthly-close-2026-q1,transform,pass,9,Variance and action fields calculated
+monthly-close-2026-q1,publish,blocked,9,Reporting pack generated
