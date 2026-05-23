@@ -1,5 +1,7 @@
 # Reporting Automation Workflow
 
+[![CI](https://github.com/HuseinHaji/reporting-automation-workflow/actions/workflows/ci.yml/badge.svg)](https://github.com/HuseinHaji/reporting-automation-workflow/actions/workflows/ci.yml)
+
 End-to-end reporting automation project that validates recurring business inputs, calculates plan-versus-actual performance, separates data-quality issues, and creates a controlled reporting pack.
 
 ## Business Goal
@@ -66,6 +68,26 @@ python3 src/run_report.py
 ```
 
 No third-party packages are required; the project uses the Python standard library.
+
+## Test
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+python3 -m pytest
+```
+
+## Simulated Business Impact
+
+- Turns a manual close/reporting process into a controlled run with audit evidence.
+- Separates clean reporting rows from exceptions before stakeholder delivery.
+- Gives managers both variance visibility and issue ownership.
+
+## How To Extend
+
+- Add email or Slack routing for high-severity quality issues.
+- Store run history in SQLite/PostgreSQL for trend monitoring.
+- Add approval status fields for close-management workflows.
+- Connect the scorecard output to a BI dashboard.
 
 ## Skills Demonstrated
 
