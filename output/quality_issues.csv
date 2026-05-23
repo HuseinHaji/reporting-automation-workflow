@@ -1,3 +1,3 @@
-month,business_unit,issue
-2026-02,Underwriting,Actual value is zero
-2026-03,Underwriting,Missing owner
+month,business_unit,severity,issue
+2026-02,Underwriting,high,Actual value is zero
+2026-03,Underwriting,high,Missing owner

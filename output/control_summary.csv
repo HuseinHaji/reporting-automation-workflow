@@ -1,0 +1,2 @@
+rows_processed,actual_eur,plan_eur,variance_eur,variance_pct,review_items,quality_issues,report_status
+9,329600.0,361000.0,-31400.0,-0.087,1,2,blocked

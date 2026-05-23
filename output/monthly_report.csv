@@ -1,10 +1,10 @@
-month,business_unit,actual_eur,plan_eur,owner,variance_eur,variance_pct,status
-2026-01,Risk Analytics,48200,45000,Huseyn,3200.0,0.071,ok
-2026-01,Underwriting,39100,41000,Aylin,-1900.0,-0.046,ok
-2026-01,Operations,28400,30000,Samir,-1600.0,-0.053,ok
-2026-02,Risk Analytics,50600,47000,Huseyn,3600.0,0.077,ok
-2026-02,Underwriting,0,42000,Aylin,-42000.0,-1.0,review
-2026-02,Operations,31900,31000,Samir,900.0,0.029,ok
-2026-03,Risk Analytics,53100,50000,Huseyn,3100.0,0.062,ok
-2026-03,Underwriting,44700,43000,,1700.0,0.04,ok
-2026-03,Operations,33600,32000,Samir,1600.0,0.05,ok
+month,business_unit,actual_eur,plan_eur,owner,variance_eur,variance_pct,status,action
+2026-01,Risk Analytics,48200,45000,Huseyn,3200.0,0.071,ok,Ready for reporting
+2026-01,Underwriting,39100,41000,Aylin,-1900.0,-0.046,ok,Ready for reporting
+2026-01,Operations,28400,30000,Samir,-1600.0,-0.053,ok,Ready for reporting
+2026-02,Risk Analytics,50600,47000,Huseyn,3600.0,0.077,ok,Ready for reporting
+2026-02,Underwriting,0,42000,Aylin,-42000.0,-1.0,review,Owner follow-up required
+2026-02,Operations,31900,31000,Samir,900.0,0.029,ok,Ready for reporting
+2026-03,Risk Analytics,53100,50000,Huseyn,3100.0,0.062,ok,Ready for reporting
+2026-03,Underwriting,44700,43000,,1700.0,0.04,ok,Owner follow-up required
+2026-03,Operations,33600,32000,Samir,1600.0,0.05,ok,Ready for reporting
