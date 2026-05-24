@@ -85,7 +85,29 @@ python src/run_pipeline.py
 For Windows:
 
 ```powershell
-.venv\Scriptsctivate
+.venv\Scripts\activate
+```
+
+## Enhanced portfolio version
+
+- Added a **Streamlit demo** at `src/app.py`.
+- Added **Dockerfile** and **docker-compose.yml** for reproducible deployment.
+- Added **CI workflows** for linting, testing, and smoke testing.
+- Added **sample data**, **unit tests**, and **project notes**.
+- Added `PROJECT_SUMMARY.md` and `PROJECT_NOTES.md` for project context.
+
+## Demo
+
+Run the demo with:
+
+```bash
+streamlit run src/app.py
+```
+
+Or with Docker:
+
+```bash
+docker-compose up --build
 ```
 
 ## Dashboard Design

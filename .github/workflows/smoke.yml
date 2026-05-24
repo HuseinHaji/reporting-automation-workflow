@@ -1,13 +1,12 @@
-name: CI
+name: Smoke Test
 
 on:
+  workflow_dispatch:
   push:
-    branches: ["main", "master"]
-  pull_request:
     branches: ["main", "master"]
 
 jobs:
-  test:
+  smoke:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,12 +20,11 @@ jobs:
           source .venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt || true
-          pip install -r requirements-dev.txt || true
-      - name: Lint & format check
+      - name: Start Streamlit app
         run: |
           source .venv/bin/activate
-          pre-commit run --all-files || true
-      - name: Run tests
+          nohup streamlit run src/app.py --server.port 8501 --server.headless true > /tmp/streamlit.log 2>&1 &
+          sleep 3
+      - name: Health check
         run: |
-          source .venv/bin/activate
-          pytest -q || true
+          curl -sSf http://127.0.0.1:8501 || (cat /tmp/streamlit.log && false)
