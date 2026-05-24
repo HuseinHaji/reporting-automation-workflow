@@ -1,6 +1,5 @@
 """Run schema and data quality checks for the synthetic reporting workflow."""
 
-from datetime import datetime
 from typing import Callable
 
 import pandas as pd
@@ -43,6 +42,8 @@ SCHEMAS = {
     "monthly_targets": ["month", "country", "product_line", "target_revenue", "target_collection_rate"],
 }
 
+CHECK_TIMESTAMP = "2026-05-24T00:00:00"
+
 
 def load_raw_data() -> dict[str, pd.DataFrame]:
     return {name: pd.read_csv(path) for name, path in RAW_FILES.items()}
@@ -65,7 +66,7 @@ def add_check(
             "failed_records": int(failed_records),
             "failure_rate": round(failed_records / records_checked, 4) if records_checked else 0,
             "severity": severity,
-            "check_timestamp": datetime.utcnow().isoformat(timespec="seconds"),
+            "check_timestamp": CHECK_TIMESTAMP,
         }
     )
 
