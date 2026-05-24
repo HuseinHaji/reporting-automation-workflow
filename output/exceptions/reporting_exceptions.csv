@@ -1,0 +1,362 @@
+exception_id,reporting_month,customer_id,exception_type,severity,description,suggested_action
+EXC00001,2025-01,CUST0049,Duplicate invoice ID,Critical,Invoice INV000001 appears more than once in the raw extract.,Investigate source-system duplicate before publishing the monthly report.
+EXC00002,2025-01,CUST0049,Duplicate invoice ID,Critical,Invoice INV000001 appears more than once in the raw extract.,Investigate source-system duplicate before publishing the monthly report.
+EXC00003,2025-11,CUST9999,Missing customer data,Critical,Invoice references a customer ID that is not available in the customer master data.,Confirm customer master completeness or request corrected source extract.
+EXC00004,2025-10,CUST0001,Negative amount,Critical,Invoice amount is negative and cannot be included in standard revenue reporting.,Review whether the record should be treated as a credit note or source-data correction.
+EXC00005,2025-07,CUST0025,Negative amount,High,Payment amount is negative and excluded from collection reporting.,"Check whether this is a reversal, adjustment, or incorrect payment extract."
+EXC00006,2025-01,CUST0053,Invoice without payment,Medium,Invoice INV000002 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00007,2025-01,CUST0022,Invoice without payment,Medium,Invoice INV000003 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00008,2025-01,CUST0014,Invoice without payment,Medium,Invoice INV000005 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00009,2025-01,CUST0028,Invoice without payment,Medium,Invoice INV000006 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00010,2025-01,CUST0041,Invoice without payment,Medium,Invoice INV000008 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00011,2025-01,CUST0059,Invoice without payment,Medium,Invoice INV000009 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00012,2025-01,CUST0035,Invoice without payment,Medium,Invoice INV000016 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00013,2025-01,CUST0029,Invoice without payment,Medium,Invoice INV000019 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00014,2025-01,CUST0061,Invoice without payment,Medium,Invoice INV000020 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00015,2025-01,CUST0037,Invoice without payment,Medium,Invoice INV000025 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00016,2025-01,CUST0056,Invoice without payment,Medium,Invoice INV000033 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00017,2025-01,CUST0074,Invoice without payment,Medium,Invoice INV000037 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00018,2025-01,CUST0057,Invoice without payment,Medium,Invoice INV000044 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00019,2025-01,CUST0050,Invoice without payment,Medium,Invoice INV000047 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00020,2025-01,CUST0039,Invoice without payment,Medium,Invoice INV000048 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00021,2025-01,CUST0045,Invoice without payment,Medium,Invoice INV000049 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00022,2025-01,CUST0018,Invoice without payment,Medium,Invoice INV000051 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00023,2025-01,CUST0034,Invoice without payment,Medium,Invoice INV000052 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00024,2025-01,CUST0017,Invoice without payment,Medium,Invoice INV000055 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00025,2025-02,CUST0031,Invoice without payment,Medium,Invoice INV000056 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00026,2025-02,CUST0001,Invoice without payment,Medium,Invoice INV000064 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00027,2025-02,CUST0054,Invoice without payment,Medium,Invoice INV000070 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00028,2025-02,CUST0005,Invoice without payment,Medium,Invoice INV000071 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00029,2025-02,CUST0063,Invoice without payment,Medium,Invoice INV000076 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00030,2025-02,CUST0003,Invoice without payment,Medium,Invoice INV000077 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00031,2025-02,CUST0009,Invoice without payment,Medium,Invoice INV000086 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00032,2025-02,CUST0048,Invoice without payment,Medium,Invoice INV000088 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00033,2025-02,CUST0010,Invoice without payment,Medium,Invoice INV000090 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00034,2025-02,CUST0020,Invoice without payment,Medium,Invoice INV000096 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00035,2025-02,CUST0070,Invoice without payment,Medium,Invoice INV000099 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00036,2025-03,CUST0005,Invoice without payment,Medium,Invoice INV000112 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00037,2025-03,CUST0046,Invoice without payment,Medium,Invoice INV000113 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00038,2025-03,CUST0013,Invoice without payment,Medium,Invoice INV000115 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00039,2025-03,CUST0009,Invoice without payment,Medium,Invoice INV000119 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00040,2025-03,CUST0017,Invoice without payment,Medium,Invoice INV000123 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00041,2025-03,CUST0016,Invoice without payment,Medium,Invoice INV000124 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00042,2025-03,CUST0026,Invoice without payment,Medium,Invoice INV000129 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00043,2025-03,CUST0018,Invoice without payment,Medium,Invoice INV000130 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00044,2025-03,CUST0035,Invoice without payment,Medium,Invoice INV000131 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00045,2025-03,CUST0057,Invoice without payment,Medium,Invoice INV000133 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00046,2025-03,CUST0015,Invoice without payment,Medium,Invoice INV000134 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00047,2025-03,CUST0050,Invoice without payment,Medium,Invoice INV000148 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00048,2025-03,CUST0001,Invoice without payment,Medium,Invoice INV000150 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00049,2025-03,CUST0051,Invoice without payment,Medium,Invoice INV000152 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00050,2025-03,CUST0004,Invoice without payment,Medium,Invoice INV000153 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00051,2025-03,CUST0073,Invoice without payment,Medium,Invoice INV000157 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00052,2025-03,CUST0068,Invoice without payment,Medium,Invoice INV000164 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00053,2025-03,CUST0008,Invoice without payment,Medium,Invoice INV000165 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00054,2025-04,CUST0003,Invoice without payment,Medium,Invoice INV000168 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00055,2025-04,CUST0011,Invoice without payment,Medium,Invoice INV000171 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00056,2025-04,CUST0070,Invoice without payment,Medium,Invoice INV000173 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00057,2025-04,CUST0031,Invoice without payment,Medium,Invoice INV000178 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00058,2025-04,CUST0074,Invoice without payment,Medium,Invoice INV000183 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00059,2025-04,CUST0019,Invoice without payment,Medium,Invoice INV000194 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00060,2025-04,CUST0049,Invoice without payment,Medium,Invoice INV000213 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00061,2025-04,CUST0018,Invoice without payment,Medium,Invoice INV000216 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00062,2025-04,CUST0033,Invoice without payment,Medium,Invoice INV000219 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00063,2025-05,CUST0060,Invoice without payment,Medium,Invoice INV000223 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00064,2025-05,CUST0017,Invoice without payment,Medium,Invoice INV000226 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00065,2025-05,CUST0041,Invoice without payment,Medium,Invoice INV000229 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00066,2025-05,CUST0076,Invoice without payment,Medium,Invoice INV000230 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00067,2025-05,CUST0050,Invoice without payment,Medium,Invoice INV000238 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00068,2025-05,CUST0069,Invoice without payment,Medium,Invoice INV000239 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00069,2025-05,CUST0079,Invoice without payment,Medium,Invoice INV000241 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00070,2025-05,CUST0080,Invoice without payment,Medium,Invoice INV000243 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00071,2025-05,CUST0005,Invoice without payment,Medium,Invoice INV000245 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00072,2025-05,CUST0026,Invoice without payment,Medium,Invoice INV000253 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00073,2025-05,CUST0009,Invoice without payment,Medium,Invoice INV000259 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00074,2025-05,CUST0073,Invoice without payment,Medium,Invoice INV000260 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00075,2025-05,CUST0010,Invoice without payment,Medium,Invoice INV000261 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00076,2025-05,CUST0056,Invoice without payment,Medium,Invoice INV000262 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00077,2025-05,CUST0023,Invoice without payment,Medium,Invoice INV000267 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00078,2025-05,CUST0072,Invoice without payment,Medium,Invoice INV000273 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00079,2025-06,CUST0041,Invoice without payment,Medium,Invoice INV000276 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00080,2025-06,CUST0003,Invoice without payment,Medium,Invoice INV000277 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00081,2025-06,CUST0073,Invoice without payment,Medium,Invoice INV000282 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00082,2025-06,CUST0033,Invoice without payment,Medium,Invoice INV000283 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00083,2025-06,CUST0061,Invoice without payment,Medium,Invoice INV000287 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00084,2025-06,CUST0065,Invoice without payment,Medium,Invoice INV000300 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00085,2025-06,CUST0057,Invoice without payment,Medium,Invoice INV000304 has no matching payment record.,Review collection status and confirm whether payment is expected in a later period.
+EXC00086,2025-01,CUST0053,Overdue invoice,High,Invoice INV000002 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00087,2025-01,CUST0022,Overdue invoice,High,Invoice INV000003 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00088,2025-01,CUST0014,Overdue invoice,High,Invoice INV000005 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00089,2025-01,CUST0028,Overdue invoice,High,Invoice INV000006 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00090,2025-01,CUST0041,Overdue invoice,High,Invoice INV000008 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00091,2025-01,CUST0059,Overdue invoice,High,Invoice INV000009 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00092,2025-01,CUST0035,Overdue invoice,High,Invoice INV000016 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00093,2025-01,CUST0029,Overdue invoice,High,Invoice INV000019 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00094,2025-01,CUST0061,Overdue invoice,High,Invoice INV000020 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00095,2025-01,CUST0037,Overdue invoice,High,Invoice INV000025 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00096,2025-01,CUST0056,Overdue invoice,High,Invoice INV000033 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00097,2025-01,CUST0074,Overdue invoice,High,Invoice INV000037 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00098,2025-01,CUST0057,Overdue invoice,High,Invoice INV000044 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00099,2025-01,CUST0050,Overdue invoice,High,Invoice INV000047 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00100,2025-01,CUST0039,Overdue invoice,High,Invoice INV000048 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00101,2025-01,CUST0045,Overdue invoice,High,Invoice INV000049 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00102,2025-01,CUST0018,Overdue invoice,High,Invoice INV000051 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00103,2025-01,CUST0034,Overdue invoice,High,Invoice INV000052 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00104,2025-01,CUST0017,Overdue invoice,High,Invoice INV000055 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00105,2025-02,CUST0031,Overdue invoice,High,Invoice INV000056 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00106,2025-02,CUST0001,Overdue invoice,High,Invoice INV000064 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00107,2025-02,CUST0054,Overdue invoice,High,Invoice INV000070 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00108,2025-02,CUST0005,Overdue invoice,High,Invoice INV000071 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00109,2025-02,CUST0063,Overdue invoice,High,Invoice INV000076 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00110,2025-02,CUST0003,Overdue invoice,High,Invoice INV000077 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00111,2025-02,CUST0009,Overdue invoice,High,Invoice INV000086 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00112,2025-02,CUST0048,Overdue invoice,High,Invoice INV000088 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00113,2025-02,CUST0010,Overdue invoice,High,Invoice INV000090 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00114,2025-02,CUST0020,Overdue invoice,High,Invoice INV000096 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00115,2025-02,CUST0070,Overdue invoice,High,Invoice INV000099 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00116,2025-03,CUST0005,Overdue invoice,High,Invoice INV000112 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00117,2025-03,CUST0046,Overdue invoice,High,Invoice INV000113 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00118,2025-03,CUST0013,Overdue invoice,High,Invoice INV000115 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00119,2025-03,CUST0009,Overdue invoice,High,Invoice INV000119 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00120,2025-03,CUST0017,Overdue invoice,High,Invoice INV000123 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00121,2025-03,CUST0016,Overdue invoice,High,Invoice INV000124 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00122,2025-03,CUST0026,Overdue invoice,High,Invoice INV000129 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00123,2025-03,CUST0018,Overdue invoice,High,Invoice INV000130 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00124,2025-03,CUST0035,Overdue invoice,High,Invoice INV000131 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00125,2025-03,CUST0057,Overdue invoice,High,Invoice INV000133 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00126,2025-03,CUST0015,Overdue invoice,High,Invoice INV000134 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00127,2025-03,CUST0050,Overdue invoice,High,Invoice INV000148 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00128,2025-03,CUST0001,Overdue invoice,High,Invoice INV000150 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00129,2025-03,CUST0051,Overdue invoice,High,Invoice INV000152 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00130,2025-03,CUST0004,Overdue invoice,High,Invoice INV000153 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00131,2025-03,CUST0073,Overdue invoice,High,Invoice INV000157 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00132,2025-03,CUST0068,Overdue invoice,High,Invoice INV000164 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00133,2025-03,CUST0008,Overdue invoice,High,Invoice INV000165 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00134,2025-04,CUST0003,Overdue invoice,High,Invoice INV000168 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00135,2025-04,CUST0011,Overdue invoice,High,Invoice INV000171 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00136,2025-04,CUST0070,Overdue invoice,High,Invoice INV000173 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00137,2025-04,CUST0031,Overdue invoice,High,Invoice INV000178 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00138,2025-04,CUST0074,Overdue invoice,High,Invoice INV000183 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00139,2025-04,CUST0019,Overdue invoice,High,Invoice INV000194 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00140,2025-04,CUST0049,Overdue invoice,High,Invoice INV000213 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00141,2025-04,CUST0018,Overdue invoice,High,Invoice INV000216 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00142,2025-04,CUST0033,Overdue invoice,High,Invoice INV000219 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00143,2025-05,CUST0060,Overdue invoice,High,Invoice INV000223 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00144,2025-05,CUST0017,Overdue invoice,High,Invoice INV000226 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00145,2025-05,CUST0041,Overdue invoice,High,Invoice INV000229 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00146,2025-05,CUST0076,Overdue invoice,High,Invoice INV000230 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00147,2025-05,CUST0050,Overdue invoice,High,Invoice INV000238 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00148,2025-05,CUST0069,Overdue invoice,High,Invoice INV000239 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00149,2025-05,CUST0079,Overdue invoice,High,Invoice INV000241 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00150,2025-05,CUST0080,Overdue invoice,High,Invoice INV000243 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00151,2025-05,CUST0005,Overdue invoice,High,Invoice INV000245 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00152,2025-05,CUST0026,Overdue invoice,High,Invoice INV000253 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00153,2025-05,CUST0009,Overdue invoice,High,Invoice INV000259 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00154,2025-05,CUST0073,Overdue invoice,High,Invoice INV000260 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00155,2025-05,CUST0010,Overdue invoice,High,Invoice INV000261 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00156,2025-05,CUST0056,Overdue invoice,High,Invoice INV000262 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00157,2025-05,CUST0023,Overdue invoice,High,Invoice INV000267 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00158,2025-05,CUST0072,Overdue invoice,High,Invoice INV000273 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00159,2025-06,CUST0041,Overdue invoice,High,Invoice INV000276 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00160,2025-06,CUST0003,Overdue invoice,High,Invoice INV000277 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00161,2025-06,CUST0073,Overdue invoice,High,Invoice INV000282 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00162,2025-06,CUST0033,Overdue invoice,High,Invoice INV000283 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00163,2025-06,CUST0061,Overdue invoice,High,Invoice INV000287 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00164,2025-06,CUST0065,Overdue invoice,High,Invoice INV000300 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00165,2025-06,CUST0057,Overdue invoice,High,Invoice INV000304 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00166,2025-06,CUST0060,Overdue invoice,High,Invoice INV000311 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00167,2025-06,CUST0025,Overdue invoice,High,Invoice INV000318 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00168,2025-06,CUST0016,Overdue invoice,High,Invoice INV000322 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00169,2025-06,CUST0029,Overdue invoice,High,Invoice INV000325 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00170,2025-06,CUST0076,Overdue invoice,High,Invoice INV000326 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00171,2025-07,CUST0014,Overdue invoice,High,Invoice INV000340 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00172,2025-07,CUST0034,Overdue invoice,High,Invoice INV000341 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00173,2025-07,CUST0065,Overdue invoice,High,Invoice INV000344 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00174,2025-07,CUST0025,Overdue invoice,High,Invoice INV000350 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00175,2025-07,CUST0015,Overdue invoice,High,Invoice INV000351 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00176,2025-07,CUST0070,Overdue invoice,High,Invoice INV000355 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00177,2025-07,CUST0003,Overdue invoice,High,Invoice INV000360 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00178,2025-07,CUST0030,Overdue invoice,High,Invoice INV000375 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00179,2025-07,CUST0039,Overdue invoice,High,Invoice INV000377 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00180,2025-07,CUST0020,Overdue invoice,High,Invoice INV000380 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00181,2025-08,CUST0023,Overdue invoice,High,Invoice INV000411 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00182,2025-08,CUST0079,Overdue invoice,High,Invoice INV000416 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00183,2025-08,CUST0040,Overdue invoice,High,Invoice INV000423 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00184,2025-08,CUST0006,Overdue invoice,High,Invoice INV000430 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00185,2025-09,CUST0051,Overdue invoice,High,Invoice INV000447 has outstanding value past the due date.,Follow up with account manager and review customer payment behavior.
+EXC00186,2025-01,CUST0011,Payment after due date,Low,Payment for invoice INV000007 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00187,2025-01,CUST0030,Payment after due date,Low,Payment for invoice INV000014 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00188,2025-01,CUST0046,Payment after due date,Low,Payment for invoice INV000018 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00189,2025-01,CUST0027,Payment after due date,Low,Payment for invoice INV000028 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00190,2025-01,CUST0032,Payment after due date,Low,Payment for invoice INV000034 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00191,2025-01,CUST0068,Payment after due date,Low,Payment for invoice INV000040 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00192,2025-01,CUST0036,Payment after due date,Low,Payment for invoice INV000045 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00193,2025-02,CUST0040,Payment after due date,Low,Payment for invoice INV000057 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00194,2025-02,CUST0028,Payment after due date,Low,Payment for invoice INV000058 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00195,2025-02,CUST0046,Payment after due date,Low,Payment for invoice INV000072 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00196,2025-02,CUST0074,Payment after due date,Low,Payment for invoice INV000075 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00197,2025-02,CUST0021,Payment after due date,Low,Payment for invoice INV000078 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00198,2025-02,CUST0056,Payment after due date,Low,Payment for invoice INV000079 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00199,2025-02,CUST0073,Payment after due date,Low,Payment for invoice INV000080 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00200,2025-02,CUST0050,Payment after due date,Low,Payment for invoice INV000081 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00201,2025-02,CUST0029,Payment after due date,Low,Payment for invoice INV000082 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00202,2025-02,CUST0027,Payment after due date,Low,Payment for invoice INV000083 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00203,2025-02,CUST0014,Payment after due date,Low,Payment for invoice INV000085 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00204,2025-02,CUST0036,Payment after due date,Low,Payment for invoice INV000087 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00205,2025-02,CUST0032,Payment after due date,Low,Payment for invoice INV000092 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00206,2025-02,CUST0065,Payment after due date,Low,Payment for invoice INV000093 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00207,2025-02,CUST0057,Payment after due date,Low,Payment for invoice INV000101 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00208,2025-02,CUST0053,Payment after due date,Low,Payment for invoice INV000105 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00209,2025-02,CUST0077,Payment after due date,Low,Payment for invoice INV000106 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00210,2025-02,CUST0013,Payment after due date,Low,Payment for invoice INV000108 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00211,2025-02,CUST0045,Payment after due date,Low,Payment for invoice INV000110 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00212,2025-03,CUST0071,Payment after due date,Low,Payment for invoice INV000114 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00213,2025-03,CUST0027,Payment after due date,Low,Payment for invoice INV000116 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00214,2025-03,CUST0060,Payment after due date,Low,Payment for invoice INV000118 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00215,2025-03,CUST0010,Payment after due date,Low,Payment for invoice INV000135 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00216,2025-03,CUST0022,Payment after due date,Low,Payment for invoice INV000138 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00217,2025-03,CUST0045,Payment after due date,Low,Payment for invoice INV000139 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00218,2025-03,CUST0059,Payment after due date,Low,Payment for invoice INV000140 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00219,2025-03,CUST0025,Payment after due date,Low,Payment for invoice INV000147 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00220,2025-03,CUST0058,Payment after due date,Low,Payment for invoice INV000149 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00221,2025-03,CUST0066,Payment after due date,Low,Payment for invoice INV000151 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00222,2025-03,CUST0031,Payment after due date,Low,Payment for invoice INV000154 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00223,2025-03,CUST0011,Payment after due date,Low,Payment for invoice INV000155 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00224,2025-03,CUST0049,Payment after due date,Low,Payment for invoice INV000163 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00225,2025-04,CUST0016,Payment after due date,Low,Payment for invoice INV000166 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00226,2025-04,CUST0037,Payment after due date,Low,Payment for invoice INV000167 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00227,2025-04,CUST0055,Payment after due date,Low,Payment for invoice INV000169 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00228,2025-04,CUST0039,Payment after due date,Low,Payment for invoice INV000172 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00229,2025-04,CUST0030,Payment after due date,Low,Payment for invoice INV000188 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00230,2025-04,CUST0006,Payment after due date,Low,Payment for invoice INV000190 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00231,2025-04,CUST0005,Payment after due date,Low,Payment for invoice INV000191 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00232,2025-04,CUST0035,Payment after due date,Low,Payment for invoice INV000192 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00233,2025-04,CUST0028,Payment after due date,Low,Payment for invoice INV000195 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00234,2025-04,CUST0046,Payment after due date,Low,Payment for invoice INV000196 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00235,2025-04,CUST0004,Payment after due date,Low,Payment for invoice INV000201 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00236,2025-04,CUST0015,Payment after due date,Low,Payment for invoice INV000204 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00237,2025-04,CUST0029,Payment after due date,Low,Payment for invoice INV000206 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00238,2025-04,CUST0053,Payment after due date,Low,Payment for invoice INV000208 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00239,2025-04,CUST0060,Payment after due date,Low,Payment for invoice INV000209 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00240,2025-04,CUST0059,Payment after due date,Low,Payment for invoice INV000211 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00241,2025-04,CUST0048,Payment after due date,Low,Payment for invoice INV000212 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00242,2025-04,CUST0023,Payment after due date,Low,Payment for invoice INV000214 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00243,2025-04,CUST0079,Payment after due date,Low,Payment for invoice INV000215 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00244,2025-04,CUST0043,Payment after due date,Low,Payment for invoice INV000217 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00245,2025-05,CUST0042,Payment after due date,Low,Payment for invoice INV000222 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00246,2025-05,CUST0071,Payment after due date,Low,Payment for invoice INV000233 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00247,2025-05,CUST0059,Payment after due date,Low,Payment for invoice INV000234 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00248,2025-05,CUST0063,Payment after due date,Low,Payment for invoice INV000235 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00249,2025-05,CUST0037,Payment after due date,Low,Payment for invoice INV000236 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00250,2025-05,CUST0068,Payment after due date,Low,Payment for invoice INV000237 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00251,2025-05,CUST0077,Payment after due date,Low,Payment for invoice INV000242 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00252,2025-05,CUST0030,Payment after due date,Low,Payment for invoice INV000246 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00253,2025-05,CUST0006,Payment after due date,Low,Payment for invoice INV000248 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00254,2025-05,CUST0043,Payment after due date,Low,Payment for invoice INV000249 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00255,2025-05,CUST0029,Payment after due date,Low,Payment for invoice INV000250 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00256,2025-05,CUST0052,Payment after due date,Low,Payment for invoice INV000251 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00257,2025-05,CUST0049,Payment after due date,Low,Payment for invoice INV000252 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00258,2025-05,CUST0057,Payment after due date,Low,Payment for invoice INV000254 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00259,2025-05,CUST0015,Payment after due date,Low,Payment for invoice INV000255 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00260,2025-05,CUST0036,Payment after due date,Low,Payment for invoice INV000256 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00261,2025-05,CUST0039,Payment after due date,Low,Payment for invoice INV000257 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00262,2025-05,CUST0051,Payment after due date,Low,Payment for invoice INV000263 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00263,2025-05,CUST0054,Payment after due date,Low,Payment for invoice INV000268 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00264,2025-05,CUST0008,Payment after due date,Low,Payment for invoice INV000270 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00265,2025-05,CUST0038,Payment after due date,Low,Payment for invoice INV000274 was received after the due date.,Monitor for repeated late-payment patterns in future reporting cycles.
+EXC00266,2025-12,CUST0018,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00267,2025-12,CUST0050,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00268,2025-12,CUST0070,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00269,2025-12,CUST0003,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00270,2025-12,CUST0005,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00271,2025-12,CUST0029,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00272,2025-12,CUST0020,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00273,2025-12,CUST0017,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00274,2025-12,CUST0049,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00275,2025-12,CUST0076,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00276,2025-12,CUST0065,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00277,2025-12,CUST0031,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00278,2025-12,CUST0009,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00279,2025-12,CUST0011,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00280,2025-12,CUST0006,High overdue ratio,High,Customer has overdue amount above 30% of total invoiced amount.,Review payment behavior and follow up with account manager.
+EXC00281,2025-12,CUST0002,Inactive customer with open invoice,High,Inactive customer still has an open invoice in the reporting base.,Confirm account status and invoice ownership before report publication.
+EXC00282,2025-01,CUST0003,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00283,2025-01,CUST0038,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00284,2025-02,CUST0016,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00285,2025-02,CUST0003,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00286,2025-02,CUST0038,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00287,2025-03,CUST0016,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00288,2025-03,CUST0035,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00289,2025-03,CUST0015,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00290,2025-03,CUST0077,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00291,2025-03,CUST0038,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00292,2025-03,CUST0025,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00293,2025-03,CUST0073,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00294,2025-03,CUST0036,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00295,2025-03,CUST0003,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00296,2025-04,CUST0016,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00297,2025-04,CUST0003,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00298,2025-04,CUST0020,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00299,2025-04,CUST0073,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00300,2025-04,CUST0035,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00301,2025-04,CUST0041,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00302,2025-04,CUST0025,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00303,2025-04,CUST0077,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00304,2025-04,CUST0015,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00305,2025-04,CUST0038,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00306,2025-04,CUST0033,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00307,2025-05,CUST0060,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00308,2025-05,CUST0016,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00309,2025-05,CUST0041,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00310,2025-05,CUST0077,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00311,2025-05,CUST0025,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00312,2025-05,CUST0015,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00313,2025-05,CUST0036,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00314,2025-05,CUST0073,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00315,2025-05,CUST0010,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00316,2025-05,CUST0035,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00317,2025-05,CUST0038,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00318,2025-06,CUST0041,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00319,2025-06,CUST0003,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00320,2025-06,CUST0020,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00321,2025-06,CUST0024,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00322,2025-06,CUST0023,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00323,2025-06,CUST0073,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00324,2025-06,CUST0033,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00325,2025-06,CUST0040,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00326,2025-06,CUST0035,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00327,2025-06,CUST0038,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00328,2025-06,CUST0036,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00329,2025-06,CUST0056,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00330,2025-06,CUST0060,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00331,2025-06,CUST0025,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00332,2025-06,CUST0001,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00333,2025-06,CUST0016,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00334,2025-06,CUST0015,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00335,2025-07,CUST0016,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00336,2025-07,CUST0060,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00337,2025-07,CUST0040,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00338,2025-07,CUST0001,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00339,2025-07,CUST0014,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00340,2025-07,CUST0025,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00341,2025-07,CUST0015,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00342,2025-07,CUST0048,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00343,2025-07,CUST0038,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00344,2025-07,CUST0003,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00345,2025-07,CUST0024,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00346,2025-07,CUST0056,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00347,2025-07,CUST0010,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00348,2025-07,CUST0036,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00349,2025-07,CUST0073,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00350,2025-07,CUST0035,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00351,2025-07,CUST0023,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00352,2025-07,CUST0030,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00353,2025-07,CUST0020,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00354,2025-07,CUST0041,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00355,2025-08,CUST0056,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00356,2025-08,CUST0048,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00357,2025-08,CUST0033,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00358,2025-08,CUST0020,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00359,2025-08,CUST0010,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00360,2025-08,CUST0059,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.
+EXC00361,2025-08,CUST0009,Contract expired but invoice active,Medium,Invoice date is after the recorded contract end date.,Validate contract renewal status or correct contract metadata.

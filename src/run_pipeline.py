@@ -1,22 +1,27 @@
+"""Run the complete reporting automation workflow from repo root."""
+
+import subprocess
+import sys
 from pathlib import Path
-from subprocess import run
 
-BASE_PATH = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[1]
+
+STEPS = [
+    "src/generate_synthetic_data.py",
+    "src/validate_data.py",
+    "src/transform_data.py",
+    "src/calculate_kpis.py",
+    "src/generate_reports.py",
+    "src/export_powerbi.py",
+]
 
 
-def run_step(command):
-    print(f'Running: {command}')
-    result = run(command, shell=True, cwd=BASE_PATH)
-    if result.returncode != 0:
-        raise SystemExit(result.returncode)
+def main() -> None:
+    for step in STEPS:
+        print(f"Running {step}")
+        subprocess.run([sys.executable, step], cwd=ROOT, check=True)
+    print("Reporting automation workflow completed.")
 
 
-def main():
-    run_step('python src/generate_raw_data.py')
-    run_step('python src/validate_data.py')
-    run_step('python src/transform_data.py')
-    run_step('python src/create_report.py')
-    print('Pipeline complete.')
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -1,131 +1,192 @@
 # Reporting Automation Workflow
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL%20style-green)
+![pandas](https://img.shields.io/badge/pandas-analytics-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-demo-red)
+![Docker](https://img.shields.io/badge/Docker-ready-informational)
+![Tests](https://img.shields.io/badge/pytest-covered-brightgreen)
+
+Reporting Automation Workflow is a synthetic business reporting project that demonstrates how recurring manual reports can be automated using Python, SQL, data validation, KPI logic, exception reporting, and dashboard-ready exports.
+
 ## Business Context
 
-This project demonstrates an automated reporting workflow for recurring monthly extracts. The business team receives data from multiple systems and needs a standardised process to validate, clean, and deliver report-ready files.
+A company has recurring monthly reporting built from raw business extracts. Analysts spend time collecting files, checking errors, cleaning records, calculating KPIs, preparing Excel-style outputs, and publishing dashboard-ready datasets. This portfolio implementation simulates that workflow using a synthetic reporting dataset for B2B financial services and insurance-style management reporting.
 
-The automation improves consistency and reduces manual effort in recurring reporting tasks.
+## Business Problem
 
-## Business Value
+Manual reporting creates repeated effort and inconsistent outputs when source files contain missing keys, duplicate invoices, invalid amounts, late payments, overdue balances, or expired contract logic. The business question is:
 
-- Eliminates manual checks for schema and quality issues.
-- Enables repeatable monthly reporting with fewer rework cycles.
-- Produces clean reporting tables and executive summaries.
-- Supports stakeholder confidence through validation metrics.
+> How can recurring operational reporting be automated so that business users receive consistent, validated, and dashboard-ready outputs with less manual effort and fewer reporting errors?
 
-## Tech Stack
+## Solution Overview
 
-- Python 3.10+ (pandas, numpy, pyyaml)
-- Oracle-style SQL examples
-- CSV-based file workflow
+The project builds an automated reporting prototype that turns raw synthetic business data into validated reporting tables, KPI summaries, exception logs, audit checks, and a BI-ready output file.
 
-## Dataset
+```text
+Synthetic raw data
+  -> schema and data quality validation
+  -> cleaned processed tables
+  -> invoice/payment/customer transformations
+  -> monthly and customer KPI calculations
+  -> business-readable exception report
+  -> Power BI-ready dashboard export
+  -> Streamlit reporting demo
+```
 
-The dataset is synthetic and represents recurring extracts for customers, transactions, and segment assignments. It includes intentionally introduced validation issues such as missing values, negative amounts, duplicate transaction IDs, and out-of-range dates.
+## Dataset Description
+
+The synthetic dataset supports monthly management reporting across customers, invoices, payments, contracts, service cases, and monthly targets.
+
+Raw tables:
+- `customers.csv`: customer master data, country, industry, risk rating, account manager, active flag
+- `invoices.csv`: invoice dates, due dates, invoice amounts, status
+- `payments.csv`: payment dates, payment amounts, payment method
+- `contracts.csv`: annual contract value, product line, contract status
+- `claims_or_cases.csv`: operational case volume and case amount
+- `monthly_targets.csv`: revenue and collection-rate targets by country and product line
 
 ## Workflow
 
-- `generate_raw_data.py`: create synthetic raw extracts.
-- `validate_data.py`: enforce schema, missing values, duplicates, negative amounts, and date range rules.
-- `transform_data.py`: clean records for reporting.
-- `create_report.py`: aggregate reporting metrics.
-- `run_pipeline.py`: execute the end-to-end workflow.
-
-## Key KPIs
-
-- Total reportable amount
-- Number of records processed
-- Validation error count
-- Duplicate records detected
-- Missing values detected
-- Rejected records
-- Clean records
-- Segment processing summary
-- Monthly business unit trend
-
-## Project Structure
-
-```text
-reporting-automation-workflow/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── config/
-│   └── reporting_config.yaml
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── reporting/
-├── logs/
-│   └── .gitkeep
-├── reports/
-│   └── .gitkeep
-├── sql/
-│   └── oracle_style_reporting_queries.sql
-├── src/
-│   ├── generate_raw_data.py
-│   ├── validate_data.py
-│   ├── transform_data.py
-│   ├── create_report.py
-│   └── run_pipeline.py
-└── screenshots/
-    └── .gitkeep
-```
-
-## How to Run
+Run the complete pipeline from the repository root:
 
 ```bash
-cd reporting-automation-workflow
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
 python src/run_pipeline.py
 ```
 
-For Windows:
+Individual steps:
 
-```powershell
-.venv\Scripts\activate
+```bash
+python src/generate_synthetic_data.py
+python src/validate_data.py
+python src/transform_data.py
+python src/calculate_kpis.py
+python src/generate_reports.py
+python src/export_powerbi.py
 ```
 
-## Enhanced portfolio version
+## Data Validation Layer
 
-- Added a **Streamlit demo** at `src/app.py`.
-- Added **Dockerfile** and **docker-compose.yml** for reproducible deployment.
-- Added **CI workflows** for linting, testing, and smoke testing.
-- Added **sample data**, **unit tests**, and **project notes**.
-- Added `PROJECT_SUMMARY.md` and `PROJECT_NOTES.md` for project context.
+The validation step writes `output/audit/data_quality_report.csv` with check name, table name, status, records checked, failed records, failure rate, severity, and timestamp.
 
-## Demo
+Implemented checks include required columns, duplicate primary keys, customer/invoice referential integrity, non-negative invoice and payment amounts, due dates after invoice dates, reasonable payment dates, valid status values, valid active flags, and target-rate ranges.
 
-Run the demo with:
+## Exception Reporting Layer
+
+The workflow creates `output/exceptions/reporting_exceptions.csv` with business-readable exceptions, severity, explanation, and suggested action.
+
+Exception types include missing customer data, invoice without payment, overdue invoice, payment after due date, high overdue ratio, negative amount, inactive customer with open invoice, contract expired but invoice active, and duplicate invoice ID.
+
+## KPI Logic
+
+Core metrics include total revenue, collected amount, outstanding amount, overdue amount, collection rate, overdue rate, average days to payment, active customers, high-risk customer share, case volume, open cases, revenue vs target, target achievement rate, month-over-month revenue change, top outstanding customers, and high-risk overdue exposure.
+
+## SQL Analytics Layer
+
+The `sql/` folder shows PostgreSQL-style reporting queries with CTEs, joins, aggregations, `CASE WHEN`, date logic, window functions, and dashboard export logic:
+
+- `01_raw_data_checks.sql`
+- `02_reporting_base_table.sql`
+- `03_kpi_calculations.sql`
+- `04_exception_report.sql`
+- `05_dashboard_export.sql`
+- `06_monthly_reporting_summary.sql`
+
+## Dashboard Design
+
+The Streamlit demo can be started with:
 
 ```bash
 streamlit run src/app.py
 ```
 
-Or with Docker:
+Dashboard pages:
+- Executive Overview: revenue, collection rate, outstanding amount, overdue amount, active customers, high-risk overdue exposure
+- Monthly Reporting Summary: month-by-month KPIs, revenue vs target, collection rate, overdue rate, open cases
+- Customer Reporting: customer drilldown, outstanding amount, overdue ratio, risk rating, account manager, reporting status
+- Exception Monitoring: exceptions by severity and type with suggested actions
+- Data Quality: audit checks, failed records, failure rate, table-level status
 
-```bash
-docker-compose up --build
+## Repository Structure
+
+```text
+config/                 configuration files
+data/raw/               synthetic source extracts
+data/processed/         cleaned reporting base tables
+notebooks/              exploratory notebook
+output/reports/         monthly and customer reporting outputs
+output/powerbi/         flat BI-ready export
+output/audit/           data quality report
+output/exceptions/      business exception report
+screenshots/            screenshot guidance/placeholders
+sql/                    reporting analytics SQL examples
+src/                    pipeline and Streamlit application
+tests/                  pytest coverage for outputs and logic
 ```
 
-## Dashboard Design
+## Outputs
 
-Power BI setup is optional. Load the clean reporting outputs from `data/reporting/` and build pages for Monthly Summary, Segment Performance, Exception Tracking and Trend Analysis.
+- `output/reports/monthly_reporting_summary.csv`
+- `output/reports/customer_reporting_table.csv`
+- `output/exceptions/reporting_exceptions.csv`
+- `output/powerbi/powerbi_reporting_dashboard.csv`
+- `output/audit/data_quality_report.csv`
 
 ## Example Insights
 
-- Segment A outperforms in reportable amount while Segment C shows elevated validation errors.
-- Duplicate and invalid transactions are concentrated in one business unit, suggesting process improvement.
-- Clean records exceed 95% after validation and transformation.
+This synthetic portfolio dataset can be used to discuss reporting insights such as overdue exposure by customer, collection-rate trend, high-risk customer share, revenue vs target performance, customers requiring account-manager follow-up, and source-data issues that should be resolved before dashboard publication.
+
+## Skills Demonstrated
+
+| Skill | Where demonstrated |
+|---|---|
+| Python | Pipeline scripts, data generation, transformations |
+| pandas | Cleaning, joins, aggregations, reporting tables |
+| SQL | Reporting queries, KPI logic, exception queries |
+| Data validation | Schema checks, quality reports, audit outputs |
+| Reporting automation | End-to-end pipeline from raw data to reports |
+| KPI design | Revenue, collection, overdue, target achievement metrics |
+| Exception reporting | Business-readable issue detection |
+| Power BI-ready modeling | Flat export table for dashboards |
+| Streamlit | Interactive reporting demo |
+| Docker | Reproducible environment |
+| CI/CD | Automated tests through GitHub Actions |
+| pytest | Validation tests and output checks |
+| Business analytics | Management reporting and operational insights |
+
+## Docker
+
+```bash
+docker build -t reporting-automation-workflow .
+docker run -p 8501:8501 reporting-automation-workflow
+```
+
+## Limitations
+
+This is a portfolio implementation using a synthetic reporting dataset. It does not connect to real company systems, does not contain confidential data, and does not claim real business impact. The CSV workflow is designed to make the reporting logic easy to inspect.
 
 ## Future Improvements
 
-- Add data lineage and audit logging.
-- Integrate with a scheduling engine for monthly refresh.
-- Expand validation rules for business rule exceptions.
+- Add database loading into PostgreSQL
+- Add scheduled orchestration with Airflow or GitHub Actions
+- Add Excel workbook generation for finance/reporting users
+- Add row-level lineage and source-file audit metadata
+- Add Power BI `.pbix` screenshots after dashboard build
+
+## GitHub Repo Polish
+
+Suggested GitHub About:
+
+```text
+Synthetic reporting automation project using Python, SQL, validation checks, exception reporting, Streamlit, and Power BI-ready outputs.
+```
+
+Suggested Topics:
+
+```text
+reporting-automation, data-analytics, python, sql, pandas, business-intelligence, streamlit, powerbi, data-validation, portfolio-project, synthetic-data, kpi-dashboard
+```
 
 ## Disclaimer
 
-This project uses fully synthetic data created for portfolio demonstration purposes. It does not contain confidential, proprietary, or real company data.
+This project uses fully synthetic data created for portfolio demonstration purposes. It is designed to demonstrate reporting automation, validation, KPI calculation, exception monitoring, and BI-ready output design. It does not use real company data and does not claim real business impact.

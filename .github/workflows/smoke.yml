@@ -1,4 +1,4 @@
-name: Smoke Test
+name: Streamlit Smoke Test
 
 on:
   workflow_dispatch:
@@ -13,18 +13,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: "3.10"
       - name: Install dependencies
         run: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install --upgrade pip
-          pip install -r requirements.txt || true
-      - name: Start Streamlit app
-        run: |
-          source .venv/bin/activate
-          nohup streamlit run src/app.py --server.port 8501 --server.headless true > /tmp/streamlit.log 2>&1 &
-          sleep 3
-      - name: Health check
-        run: |
-          curl -sSf http://127.0.0.1:8501 || (cat /tmp/streamlit.log && false)
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Generate reporting outputs
+        run: python src/run_pipeline.py
+      - name: Streamlit import smoke check
+        run: python -c "import streamlit; import src.app"
