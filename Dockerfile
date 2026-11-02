@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED=1
 
 COPY requirements.txt ./
 COPY requirements-dev.txt ./
-RUN pip install --upgrade pip && pip install -r requirements.txt || true
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 COPY src/ ./src/
 COPY data/ ./data/

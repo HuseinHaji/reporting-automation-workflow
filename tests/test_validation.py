@@ -1,8 +1,12 @@
+import sys
 from pathlib import Path
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from validate_data import blocking_failures
 
 
 def test_raw_primary_keys_and_amount_quality_after_cleaning():
@@ -30,3 +34,44 @@ def test_data_quality_report_has_business_controls():
         "payment_amount_non_negative",
         "due_date_after_invoice_date",
     }.issubset(set(quality["check_name"]))
+    assert blocking_failures(quality).empty
+
+
+def test_structural_validation_failure_is_blocking():
+    report = pd.DataFrame(
+        [
+            {
+                "status": "FAIL",
+                "check_name": "required_columns_exist",
+                "table_name": "invoices",
+                "failed_records": 1,
+                "severity": "Critical",
+            },
+            {
+                "status": "FAIL",
+                "check_name": "invoice_amount_non_negative",
+                "table_name": "invoices",
+                "failed_records": 1,
+                "severity": "Critical",
+            },
+        ]
+    )
+
+    failures = blocking_failures(report)
+    assert failures["check_name"].tolist() == ["required_columns_exist"]
+
+
+def test_quarantine_tolerance_is_enforced():
+    report = pd.DataFrame(
+        [
+            {
+                "status": "FAIL",
+                "check_name": "invoice_customer_exists",
+                "table_name": "invoices",
+                "failed_records": 2,
+                "severity": "Critical",
+            }
+        ]
+    )
+
+    assert not blocking_failures(report).empty

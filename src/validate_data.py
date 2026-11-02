@@ -1,5 +1,6 @@
 """Run schema and data quality checks for the synthetic reporting workflow."""
 
+import sys
 from typing import Callable
 
 import pandas as pd
@@ -43,6 +44,15 @@ SCHEMAS = {
 }
 
 CHECK_TIMESTAMP = "2026-05-24T00:00:00"
+
+# Known synthetic row defects flow to cleaning/exception reporting up to a small,
+# explicit tolerance. Any other critical failure blocks immediately.
+NON_BLOCKING_FAILURE_LIMITS = {
+    "no_duplicate_invoice_id": 2,
+    "invoice_customer_exists": 1,
+    "invoice_amount_non_negative": 1,
+    "payment_amount_non_negative": 1,
+}
 
 
 def load_raw_data() -> dict[str, pd.DataFrame]:
@@ -165,6 +175,14 @@ def build_quality_report(data: dict[str, pd.DataFrame]) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def blocking_failures(report: pd.DataFrame) -> pd.DataFrame:
+    """Return failures that exceed quarantine tolerances and must stop reporting."""
+    failed = report.loc[report["status"].eq("FAIL")].copy()
+    limits = failed["check_name"].map(NON_BLOCKING_FAILURE_LIMITS).fillna(0)
+    is_critical = failed["severity"].str.casefold().eq("critical")
+    return failed.loc[is_critical & failed["failed_records"].gt(limits)].copy()
+
+
 def main() -> None:
     ensure_directories()
     data = load_raw_data()
@@ -172,7 +190,15 @@ def main() -> None:
     AUDIT_DIR.mkdir(parents=True, exist_ok=True)
     report.to_csv(REPORT_FILES["quality_report"], index=False)
     failed = int((report["status"] == "FAIL").sum())
-    print(f"Data validation completed with {failed} failed checks. Report: {REPORT_FILES['quality_report']}")
+    blocking = blocking_failures(report)
+    print(
+        f"Data validation completed with {failed} failed checks "
+        f"({len(blocking)} blocking). Report: {REPORT_FILES['quality_report']}"
+    )
+    if not blocking.empty:
+        print("Blocking validation failures:")
+        print(blocking[["table_name", "check_name", "failed_records"]].to_string(index=False))
+        sys.exit(1)
 
 
 if __name__ == "__main__":

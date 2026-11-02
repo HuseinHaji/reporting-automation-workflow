@@ -71,6 +71,12 @@ The validation step writes `output/audit/data_quality_report.csv` with check nam
 
 Implemented checks include required columns, duplicate primary keys, customer/invoice referential integrity, non-negative invoice and payment amounts, due dates after invoice dates, reasonable payment dates, valid status values, valid active flags, and target-rate ranges.
 
+Missing schema and critical failures above an explicit per-check tolerance are
+blocking: the pipeline exits before producing management reports. A small number of
+expected row-level defects in the synthetic source data are non-blocking because the
+transformation and exception stages quarantine them; they remain visible in the audit
+and exception outputs.
+
 ## Exception Reporting Layer
 
 The workflow creates `output/exceptions/reporting_exceptions.csv` with business-readable exceptions, severity, explanation, and suggested action.
